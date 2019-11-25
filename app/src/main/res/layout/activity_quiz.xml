@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg"
+    android:padding="16dp"
+    tools:context=".QuizActivity">
+
+    <TextView
+        android:id="@+id/quiz_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score : 0"
+        android:textColor="@android:color/black"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/quiz_question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question : 1/x"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/quiz_score"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/quiz_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:text="00:30"
+        android:layout_alignParentEnd="true"
+        android:freezesText="true"/>
+
+    <TextView
+        android:id="@+id/quiz_question_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Here i am going to put the question ..."
+        android:textSize="20sp"
+        android:layout_above="@id/quiz_radio_group"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:freezesText="true"/>
+
+
+    <RadioGroup
+        android:id="@+id/quiz_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/quiz_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/quiz_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 2"
+            android:freezesText="true"/>
+
+        <RadioButton
+            android:id="@+id/quiz_option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 3"
+            android:freezesText="true"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/quiz_confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/screen_bg"
+        android:layout_below="@id/quiz_radio_group"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/black"
+        android:text="Confirm"
+        android:freezesText="true"/>
+</RelativeLayout>
